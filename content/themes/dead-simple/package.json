@@ -1,0 +1,23 @@
+{
+  "name": "dead-simple",
+  "description": "Simple theme for web",
+  "version": "1.0",
+  "engines": {
+    "ghost": ">=0.9.0 <1.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Gaynor Creative"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Websites"
+    ]
+  },
+  "keywords": [
+    "ghost",
+    "theme"
+  ]
+}

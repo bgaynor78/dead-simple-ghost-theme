@@ -1,0 +1,13 @@
+{
+  "name": "front-end-build",
+  "version": "1.0.0",
+  "description": "This handles all dependencies for the Dead Simple Theme build process",
+  "main": "gulpfile.js",
+  "author": "Brett Gaynor",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^2.3.2"
+  }
+}
