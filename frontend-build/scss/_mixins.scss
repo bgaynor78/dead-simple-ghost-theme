@@ -75,3 +75,12 @@
   // Output standard non-prefixed declaration
   #{$property}: $value;
 }
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

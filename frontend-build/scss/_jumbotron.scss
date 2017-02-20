@@ -9,8 +9,12 @@
   background: #222 no-repeat center center;
   background-size: cover;
   overflow: hidden;
-}
 
-.main-header .inner {
-  width: 80%;
+  .inner {
+    width: 1170px;
+  }
+
+  .page-template & {
+    height: 450px;
+  }
 }

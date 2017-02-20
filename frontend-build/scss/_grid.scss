@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+/**********************************************************************
+      GRID SYSTEM
+**********************************************************************/
+
+.col-row {
+  @include clearfix;
+  display: block;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: 15px;
+}
+
+.col {
+  display: inline-block;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.one-half {
+    width: calc(50% - 30px);
+  }
+
+  &.one-third {
+    width: calc(33.33% - 30px);
+  }
+
+  &.two-thirds {
+    width: calc(66.66% - 30px);
+  }
+
+  &.one-quarter {
+    width: calc(25% - 30px);
+  }
+
+  &.three-quarters {
+    width: calc(75% - 30px);
+  }
+}

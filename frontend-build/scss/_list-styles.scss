@@ -1,0 +1,197 @@
+@import 'variables';
+@import 'mixins';
+
+
+$square-icon: "\ea1e";
+$disc-icon: "\ea55";
+
+/*************************************************************
+      GENERAL LIST STYLES
+*************************************************************/
+
+ul, ol {
+  margin: 0 0 1.75em 0;
+  padding-left: 0;
+  text-rendering: geometricPrecision;
+}
+
+ul {
+  list-style: none;
+}
+
+ol ol, ul ul,
+ul ol, ol ul {
+  margin: 0 0 0.4em 0;
+  padding-left: $indent-amount - 1em;
+}
+
+li {
+  margin: $list-item-margin 0;
+
+  > p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+li li {
+  margin: 0;
+}
+
+
+/*************************************************************
+      LIST STYLES VARIATIONS
+*************************************************************/
+
+.unstyled-list {
+
+  li {
+
+  }
+}
+
+
+.diamond-list {
+
+  li {
+    padding-left: 1em;
+    position: relative;
+
+    &:before {
+      content: $square-icon;
+      display: inline-block;
+      font-family: $icon-font;
+      padding-right: 1em;
+      font-size: 10px;
+      @include prefix(transform, rotate(45deg), webkit moz);
+      position: absolute;
+      top: calc(50% - 12px);
+      left: 0;
+    }
+  }
+}
+
+.square-list {
+
+  li {
+    padding-left: 1em;
+    position: relative;
+
+    &:before {
+      content: $square-icon;
+      font-family: $icon-font;
+      color: $simple-red;
+      display: inline-block;
+      padding-right: 1em;
+      font-size: 10px;
+      position: absolute;
+      top: calc(50% - 14px);
+      left: 0;
+    }
+  }
+}
+
+.disc-list {
+
+  li {
+    padding-left: 1em;
+    position: relative;
+
+    &:before {
+      content: $disc-icon;
+      font-family: $icon-font;
+      color: $simple-blue;
+      display: inline-block;
+      padding-right: 1em;
+      font-size: 10px;
+      position: absolute;
+      top: calc(50% - 14px);
+      left: 0;
+    }
+  }
+}
+
+.numbered-list {
+
+  li {
+    counter-increment: custom-counter;
+    list-style: none;
+
+    &:before {
+      content: counter(custom-counter);
+      padding: 5px;
+      width: 16px;
+      height: 16px;
+      text-align: center;
+      line-height: 16px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &.rounded {
+
+    li {
+
+      &:before {
+        @include prefix(border-radius, 50%, webkit moz);
+        background-color: $simple-blue;
+        color: $lightest-gray;
+      }
+    }
+  }
+
+  &.squared {
+
+    li {
+
+      &:before {
+        @include prefix(border-radius, 2px, webkit moz);
+        background-color: $simple-red;
+        color: $lightest-gray;
+      }
+    }
+  }
+}
+
+.icons-list {
+
+  li {
+
+    &:before {
+      margin-right: 10px;
+      padding: 8px;
+      font-size: 16px;
+      text-align: center;
+      height: 16px;
+      line-height: 16px;
+      width: 16px;
+      display: inline-block;
+      background-color: $simple-blue;
+      color: $lightest-gray;
+    }
+  }
+
+  &.rounded {
+
+    li {
+
+      &:before {
+        @include prefix(border-radius, 50%, webkit moz);
+        background-color: $simple-blue;
+        color: $lightest-gray;
+      }
+    }
+  }
+
+  &.squared {
+
+    li {
+
+      &:before {
+        @include prefix(border-radius, 2px, webkit moz);
+        background-color: $simple-red;
+        color: $lightest-gray;
+      }
+    }
+  }
+}

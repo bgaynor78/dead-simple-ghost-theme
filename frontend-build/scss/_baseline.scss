@@ -4,143 +4,111 @@
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
-
 html {
   height: 100%;
   max-height: 100%;
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Titillium Web", serif;
+  font-family: $base-font-family;
   letter-spacing: 0.01rem;
   font-size: 1.8rem;
   line-height: 1.75em;
   color: #3A4145;
   text-rendering: geometricPrecision;
 }
-
 ::-moz-selection {
   background: #D6EDFF;
 }
-
 ::selection {
   background: #D6EDFF;
 }
-
 h1, h2, h3,
 h4, h5, h6 {
   color: #2E2E2E;
   line-height: 1.15em;
   margin: 0 0 0.4em 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: $heading-font-family;
   text-rendering: geometricPrecision;
 }
-
 h1 {
-  font-size: 5rem;
+  font-size: $h1-font-size;
   letter-spacing: -2px;
   text-indent: -3px;
 }
-
 h2 {
-  font-size: 3.6rem;
+  font-size: $h2-font-size;
   letter-spacing: -1px;
 }
-
 h3 {
-  font-size: 3rem;
+  font-size: $h3-font-size;
   letter-spacing: -0.6px;
 }
-
 h4 {
-  font-size: 2.5rem;
+  font-size: $h4-font-size;
 }
-
 h5 {
-  font-size: 2rem;
+  font-size: $h5-font-size;
 }
-
 h6 {
-  font-size: 2rem;
+  font-size: $h6-font-size;
 }
-
 a {
-  color: #4A4A4A;
+  color: $simple-blue;
   transition: color 0.3s ease;
+
+  &:hover {
+    color: $simple-dark-blue;
+  }
 }
 
-a:hover {
-  color: #111;
-}
-
-p, ul, ol {
+p {
   margin: 0 0 1.75em 0;
   text-rendering: geometricPrecision;
-}
-
-ol, ul {
-  padding-left: 3rem;
-}
-
-ol ol, ul ul,
-ul ol, ol ul {
-  margin: 0 0 0.4em 0;
-  padding-left: 2em;
-}
-
-li {
-  margin: 0.4em 0;
-}
-
-li li {
-  margin: 0;
-}
-
-li > p:last-of-type {
-  margin-bottom: 0;
 }
 
 hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: #EFEFEF 1px solid;
+  border-top: 1px solid $lightest-gray;
   margin: 3.2em 0;
   padding: 0;
 }
 
 blockquote {
   @include prefix(box-sizing, border-box, moz);
-  //-moz-box-sizing: border-box;
-  //box-sizing: border-box;
   margin: 1.75em 0 1.75em -2.2em;
   padding: 0 0 0 1.75em;
   border-left: #4A4A4A 0.4em solid;
+
+  p {
+    margin: 0.8em 0;
+    font-style: italic;
+  }
+
+  small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: $light-gray;
+
+    &:before {
+      content: "\2014 \00A0";
+    }
+  }
+
+  cite {
+    font-weight: 700;
+
+    a {
+      font-weight: normal;
+    }
+  }
 }
-
-blockquote p {
-  margin: 0.8em 0;
-  font-style: italic;
-}
-
-blockquote small {
-  display: inline-block;
-  margin: 0.8em 0 0.8em 1.5em;
-  font-size: 0.9em;
-  color: #CCC;
-}
-
-blockquote small:before { content: "\2014 \00A0"; }
-
-blockquote cite {
-  font-weight: 700;
-}
-
-blockquote cite a { font-weight: normal; }
 
 table {
   -moz-box-sizing: border-box;
