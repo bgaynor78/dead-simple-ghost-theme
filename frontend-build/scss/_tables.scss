@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+
+table {
+  @include prefix(box-sizing, border-box, moz);
+  margin: 1.75em 0;
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+
+  th,
+  td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid $lightest-gray;
+  }
+
+  th {
+    color: $dark-gray;
+  }
+
+  tbody {
+    & > tr:nth-child(odd) > td,
+    & > tr:nth-child(odd) > th {
+      background-color: #F6F6F6;
+    }
+  }
+
+  &.plain {
+
+    tbody {
+      & > tr:nth-child(odd) > td,
+      & > tr:nth-child(odd) > th {
+        background: transparent;
+      }
+    }
+  }
+}
+
+//table caption + thead tr:first-child th,
+//table caption + thead tr:first-child td,
+//table colgroup + thead tr:first-child th,
+//table colgroup + thead tr:first-child td,
+//table thead:first-child tr:first-child th,
+//table thead:first-child tr:first-child td {
+//  border-top: 0;
+//}
+
+//table table table { background-color: #FFF; }

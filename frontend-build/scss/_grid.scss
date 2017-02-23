@@ -5,6 +5,12 @@
       GRID SYSTEM
 **********************************************************************/
 
+.inner {
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+}
+
 .col-row {
   @include clearfix;
   display: block;
@@ -37,5 +43,9 @@
 
   &.three-quarters {
     width: calc(75% - 30px);
+  }
+
+  &.full-width {
+    width: calc(100% - 30px);
   }
 }

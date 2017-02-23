@@ -156,6 +156,7 @@ li li {
 .icons-list {
 
   li {
+    font-family: $base-font-family;
 
     &:before {
       margin-right: 10px;
@@ -168,6 +169,7 @@ li li {
       display: inline-block;
       background-color: $simple-blue;
       color: $lightest-gray;
+
     }
   }
 

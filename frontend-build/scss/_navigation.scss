@@ -188,7 +188,7 @@ body.nav-opened .nav-cover {
   transition: all 0.5s ease;
 
   &:before {
-    font-family: icomoon;
+    font-family: $icon-font;
     content: '\e9bd';
     font-size: 12px;
     font-weight: bold;
