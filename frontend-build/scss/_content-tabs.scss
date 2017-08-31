@@ -1,34 +1,38 @@
 @import 'variables';
 @import 'mixins';
 
-.tabs-nav {
 
-  li {
-    display: inline-block;
+.ds-tabs {
 
-    a {
-      border: 2px solid $simple-blue;
-      text-decoration: none;
-      display: block;
-      min-width: 60px;
-      padding: 0.25rem 1.5rem;
-      text-align: center;
-      @include prefix(border-radius, 3px, webkit moz);
-      color: $dark-gray;
-      background-color: transparent;
-      @include prefix(transition, all .2s linear, webkit moz ms);
+  .tabs-nav {
 
-      &:hover,
-      &.active {
-        background-color: $simple-blue;
-        color: $lightest-gray;
+    li {
+      display: inline-block;
+
+      a {
+        border: 2px solid $simple-blue;
+        text-decoration: none;
+        display: block;
+        min-width: 60px;
+        padding: 0.25rem 1.5rem;
+        text-align: center;
+        @include prefix(border-radius, 3px, webkit moz);
+        color: $dark-gray;
+        background-color: transparent;
+        @include prefix(transition, all .2s linear, webkit moz ms);
+
+        &:hover,
+        &.active {
+          background-color: $simple-blue;
+          color: $lightest-gray;
+        }
       }
     }
   }
-}
 
-.tab-content {
-  @include prefix(animation, fadeEffect 1s, webkit);
+  .tab-content {
+    @include prefix(animation, fadeEffect 1s, webkit);
+  }
 }
 
 @-webkit-keyframes fadeEffect {

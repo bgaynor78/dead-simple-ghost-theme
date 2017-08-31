@@ -1,13 +1,17 @@
 {
   "name": "dead-simple",
   "description": "Simple theme for web",
-  "version": "1.0",
+  "version": "1.0.0",
   "engines": {
     "ghost": ">=0.9.0 <1.0.0"
   },
+  "config": {
+      "posts_per_page": 5
+  },
   "license": "MIT",
   "author": {
-    "name": "Gaynor Creative"
+    "name": "Gaynor Creative",
+    "email": "brett.gaynor@gmail.com"
   },
   "gpm": {
     "type": "theme",

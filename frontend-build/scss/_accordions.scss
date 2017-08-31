@@ -1,0 +1,41 @@
+@import 'variables';
+@import 'mixins';
+
+.ds-accordion {
+
+  .accordion-heading {
+    border-bottom: 1px solid $light-gray;
+
+    .accordion-trigger {
+      width: 100%;
+      padding: $small-horizontal-padding 0;
+      background-color: $lightest-gray;
+
+      a {
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding-left: $small-horizontal-padding;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:nth-last-child(2) {
+      border-bottom: 0;
+    }
+  }
+
+  .accordion-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    h6 {
+      margin-top: 15px;
+    }
+  }
+}
